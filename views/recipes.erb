@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Recipes</title>
+</head>
+<body>
+
+
+<h1>-Recipes-</h1>
+
+  <ul class="ul">
+    <% @recipes.each do |recipe| %>
+    <% link = recipe["id"] %>
+    <li><a href="recipes/<%= link %>"><%= "#{recipe["name"]}" %></a></li>
+    <% end %>
+  </ul>
+
+
+
+</body>
+</html>

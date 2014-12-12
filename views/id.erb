@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= params[:id] %></title>
+</head>
+<body>
+
+
+  <% @recipe_arr.each do |reci| %>
+    <h1><%= "#{reci["name"]}" %></h1>
+
+    <h3>DESCRIPTION</h3>
+    <p><%= "#{reci["description"]}" %></p>
+
+    <h3>INSTRUCTIONS</h3>
+    <p><%= "#{reci["instructions"]}" %></p>
+  <% end %>
+
+
+
+  <h3>INGREDIENTS</h3>
+  <ul>
+    <% @ingredients_arr.each do |ingr| %>
+    <li><%= "#{ingr["name"]}" %></li>
+    <% end %>
+  </ul>
+
+
+
+
+</body>
+</html>
